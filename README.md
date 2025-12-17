@@ -156,17 +156,6 @@ POST /api/v1/notifications
 
 ---
 
-##  Resiliência
-
-O serviço implementa os seguintes padrões:
-
-- **Circuit Breaker**: evita falhas em cascata quando o provedor externo está indisponível
-- **Retry**: tenta reenviar a requisição em falhas temporárias
-
-Esses padrões tornam o serviço mais robusto e adequado para reuso em ambientes distribuídos.
-
----
-
 ##  Documentação da API
 
 A documentação está definida no arquivo:
@@ -176,16 +165,5 @@ swagger.yaml
 ```
 
 Ela pode ser integrada ao Swagger UI para visualização interativa.
-
----
-
-##  Reuso e Extensibilidade
-
-Este microserviço foi projetado para:
-
-- Ser reutilizado por múltiplos sistemas
-- Ser independente de domínio
-- Facilitar a adição de novos canais (SMS, Push)
-- Ser implantado como microserviço ou serviço SOA
 
 ---
