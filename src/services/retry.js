@@ -1,12 +1,17 @@
-async function retry(fn, retries = 3, delay = 500) {
-  try {
-    return await fn();
-  } catch (error) {
-    if (retries === 0) throw error;
+const retry = require("async-retry");
 
-    await new Promise((resolve) => setTimeout(resolve, delay));
-    return retry(fn, retries - 1, delay);
-  }
+async function withRetry(fn) {
+  return retry(
+    async () => {
+      return await fn();
+    },
+    {
+      retries: 3,
+      minTimeout: 1000,
+      maxTimeout: 5000,
+      factor: 2
+    }
+  );
 }
 
-module.exports = retry;
+module.exports = { withRetry };
