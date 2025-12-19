@@ -2,7 +2,7 @@
 
 Microserviço reutilizável para envio de notificações, desenvolvido em **Node.js**, com foco em **reuso de software**, **SOA/Microserviços** e **resiliência** (Circuit Breaker + Retry).
 
-O serviço pode ser integrado a diferentes sistemas (e-commerce, sistemas acadêmicos, ERPs, SaaS) para envio de notificações por canais como **e-mail** (extensível para SMS e Push).
+O serviço pode ser integrado a diferentes sistemas (e-commerce, sistemas acadêmicos, ERPs, SaaS) para envio de notificações por **e-mail**.
 
 ---
 
